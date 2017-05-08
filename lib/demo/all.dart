@@ -8,6 +8,6 @@
 //export 'contacts_demo.dart';
 //export 'cupertino/cupertino.dart';
 export 'material/material.dart';
-//export 'pesto_demo.dart';
+export 'pesto_demo.dart';
 //export 'shrine_demo.dart';
 //export 'typography_demo.dart';

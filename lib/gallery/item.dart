@@ -61,6 +61,14 @@ List<GalleryItem> _buildGalleryItems() {
 //      routeName: ShrineDemo.routeName,
 //      buildRoute: (BuildContext context) => new ShrineDemo(),
 //    ),
+    // galleryItems.insert(0,     ??
+      new GalleryItem(
+        title: 'ethSync',
+        subtitle: 'Simple ethSyncing instructions',
+        category: 'Demos',
+        routeName: PestoDemo.routeName,
+        buildRoute: (BuildContext context) => new PestoDemo(),    //=> const PestoDemo(),   ? from update
+      ),
 //    new GalleryItem(
 //      title: 'Contact profile',
 //      subtitle: 'Address book entry with a flexible appbar',
@@ -251,13 +259,13 @@ List<GalleryItem> _buildGalleryItems() {
 //      routeName: TabsDemo.routeName,
 //      buildRoute: (BuildContext context) => new TabsDemo(),
 //    ),
-//    new GalleryItem(
-//      title: 'Text fields',
-//      subtitle: 'Single line of editable text and numbers',
-//      category: 'Material Components',
-//      routeName: TextFormFieldDemo.routeName,
-//      buildRoute: (BuildContext context) => const TextFormFieldDemo(),
-//    ),
+    new GalleryItem(
+      title: 'Contact: Text input fields',
+      subtitle: 'Single line of editable text and numbers',
+      category: 'Material Components',
+      routeName: TextFormFieldDemo.routeName,
+      buildRoute: (BuildContext context) => const TextFormFieldDemo(),
+    ),
 //    new GalleryItem(
 //      title: 'Tooltips',
 //      subtitle: 'Short message displayed after a long-press',

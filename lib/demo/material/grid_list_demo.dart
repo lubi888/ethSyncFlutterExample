@@ -251,13 +251,18 @@ class GridListDemoState extends State<GridListDemo> {
     ),
     new Photo(
       assetName: 'assets/gethTerm.png',
-      title: 'Philippines',
-      caption: 'Batad rice terraces',
+      title: 'eth cli terminator',
+      caption: 'geth.attach, htop, geth',
     ),
     new Photo(
       assetName: 'assets/devcon1.png',
       title: 'Devcon1',
       caption: 'community',
+    ),
+    new Photo(
+      assetName: 'assets/bleachBitSwap.png',
+      title: 'bleach bit clean cache ',
+      caption: 'ckean swap, etc',
     ),
 //    new Photo(
 //      assetName: 'packages/flutter_gallery_assets/landscape_2.jpg',
