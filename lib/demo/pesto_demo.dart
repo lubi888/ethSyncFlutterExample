@@ -204,7 +204,8 @@ class _PestoLogoState extends State<PestoLogo> {
   static const double kLogoWidth = 220.0;
   static const double kImageHeight = 108.0;
   static const double kTextHeight = 48.0;
-  final TextStyle titleStyle = const PestoStyle(fontSize: kTextHeight, fontWeight: FontWeight.w900, color: Colors.white, letterSpacing: 3.0);
+  //header color
+  final TextStyle titleStyle = const PestoStyle(fontSize: kTextHeight, fontWeight: FontWeight.w900, color: Colors.redAccent, letterSpacing: 3.0);
   final RectTween _textRectTween = new RectTween(
     begin: new Rect.fromLTWH(0.0, kLogoHeight, kLogoWidth, kTextHeight),
     end: new Rect.fromLTWH(0.0, kImageHeight, kLogoWidth, kTextHeight)
@@ -233,7 +234,7 @@ class _PestoLogoState extends State<PestoLogo> {
               rect: _textRectTween.lerp(widget.t),
               child: new Opacity(
                 opacity: _textOpacity.transform(widget.t),
-                child: new Text('\u1499 add some -', style: titleStyle, textAlign: TextAlign.center),    //head bar under graph basil leaf
+                child: new Text('ethSync', style: titleStyle, textAlign: TextAlign.center),    //head bar under graph basil leaf
               ),
             ),
           ],
@@ -308,7 +309,7 @@ class RecipePage extends StatefulWidget {
 
 class _RecipePageState extends State<RecipePage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  final TextStyle menuItemStyle = const PestoStyle(fontSize: 15.0, color: Colors.orangeAccent, height: 24.0/15.0);           //Colors.black54, height: 24.0/15.0);             //Colors.black54, height: 24.0/15.0);
+  final TextStyle menuItemStyle = const PestoStyle(fontSize: 15.0, color: Colors.green, height: 24.0/15.0);           //Colors.black54, height: 24.0/15.0);             //Colors.black54, height: 24.0/15.0);
 // top r dropdown text colours    popupmenue item ?
   double _getAppBarHeight(BuildContext context) => MediaQuery.of(context).size.height * 0.3;
 
@@ -420,9 +421,9 @@ class _RecipePageState extends State<RecipePage> {
 class RecipeSheet extends StatelessWidget {
   final TextStyle titleStyle = const PestoStyle(fontSize: 34.0);
   final TextStyle descriptionStyle = const PestoStyle(fontSize: 15.0, color: Colors.blue, height: 24.0/15.0);
-  final TextStyle itemStyle = const PestoStyle(fontSize: 15.0, color: Colors.orangeAccent, height: 24.0/15.0);              // height: 24.0/15.0);
+  final TextStyle itemStyle = const PestoStyle(fontSize: 15.0, color: Colors.yellowAccent, height: 24.0/15.0);              // height: 24.0/15.0);
   final TextStyle itemAmountStyle = new PestoStyle(fontSize: 15.0, color: Colors.green, height: 24.0/15.0);   //color: _kTheme.primaryColor, height
-  final TextStyle headingStyle = const PestoStyle(fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.yellow, height: 24.0/15.0);              //height: 24.0/15.0);
+  final TextStyle headingStyle = const PestoStyle(fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.orangeAccent, height: 24.0/15.0);              //height: 24.0/15.0);
 
   RecipeSheet({ Key key, this.recipe }) : super(key: key);
 
@@ -554,20 +555,21 @@ const List<Recipe> kPestoRecipes = const <Recipe>[
     name: 'ethSync blockchain',
     author: 'linUbi',
     ingredientsImagePath: 'assets/ethBullet.png',             // 'packages/flutter_gallery_assets/pesto/quick.png',
-    description: 'This is were all the desc goes. Perhaps try help there are sooooooooooooooooooo many things to do.',        //'Bask in greens this season by trying this delightful take on traditional bruschetta. Top with a dollop of homemade pesto, and season with freshly ground sea salt and pepper.',
+    description: 'This is were all the desc goes.\nsooooo many things to do.',        //'Bask in greens this season by trying this delightful take on traditional bruschetta. Top with a dollop of homemade pesto, and season with freshly ground sea salt and pepper.',
     imagePath: 'assets/ethSync.jpg',            //'packages/flutter_gallery_assets/pesto/image1.jpg',
-    ingredients: const<RecipeIngredient>[      const RecipeIngredient(amount: '1 tsp', description: 'Salt'),
-      const RecipeIngredient(amount: '2 tsp', description: 'Lemon'),
-      const RecipeIngredient(amount: '4 cups', description: 'Chicken stock'),
-      const RecipeIngredient(amount: 'RAM', description: 'Import, Check'),
+    ingredients: const<RecipeIngredient>[
+// const RecipeIngredient(amount: '1 tsp', description: 'Salt'),
+//      const RecipeIngredient(amount: '2 tsp', description: 'Lemon'),
+//      const RecipeIngredient(amount: '4 cups', description: 'Chicken stock'),
+//      const RecipeIngredient(amount: 'RAM', description: 'Import, Check'),
       const RecipeIngredient(amount: 'ROM', description: 'Long storage. HDD, SD drive'),
       const RecipeIngredient(amount: 'Net', description: 'makes differen between doing this in days and in hours'),
       const RecipeIngredient(amount: 'Time', description: 'everything u have '),
-      const RecipeIngredient(amount: 'Luck', description: 'Salt $hiero'),
+      const RecipeIngredient(amount: 'Luck', description: 'Salt pinch'),
     ],
     steps: const<RecipeStep>[
-      const RecipeStep(description: 'coffee, tea, lit'),
-      const RecipeStep(duration: '6hrs - 6 days', description: 'syncing'),
+      const RecipeStep(duration: 'whatever uw want', description: 'coffee, tea, etc.'),
+      const RecipeStep(duration: '6hrs - 6 days', description: 'synchronizing'),
     ],
 
 
@@ -584,19 +586,19 @@ const List<Recipe> kPestoRecipes = const <Recipe>[
   ),
   const Recipe(
     name: 'eth CLI',
-    author: 'luvi_dev',
+    author: 'lubi_dev',
     ingredientsImagePath: 'assets/ethBullet.png',
-    description: 'Abundant in color,\nand healthy,\n delicious goodness', //cooking with these South American purple potatoes is a treat. Boil, mash, bake, or roast them. For taste cook with chicken stock, and a dash of extra virgin olive oil.',
+    description: 'knowledge impart\nsimple clear concise', //cooking with these South American purple potatoes is a treat. Boil, mash, bake, or roast them. For taste cook with chicken stock, and a dash of extra virgin olive oil.',
     imagePath: 'assets/wallpaper-homestead.jpg',
     ingredients: const<RecipeIngredient>[
-      const RecipeIngredient(amount: 'xx', description: 'get set for ethSync\nto find the key...\nthat has been\nlong missing...'),
+      const RecipeIngredient(amount: 'xx', description: 'get set for ethSync\n...'),
 //      const RecipeIngredient(amount: '1 tsp', description: 'Salt'),
 //      const RecipeIngredient(amount: '2 tsp', description: 'Lemon'),
 //      const RecipeIngredient(amount: '4 cups', description: 'Chicken stock'),
-      const RecipeIngredient(amount: '1 drop', description: 'love and attn')
+//      const RecipeIngredient(amount: '1 drop', description: 'love and attn')
     ],
     steps: const<RecipeStep>[
-      const RecipeStep(duration: 'type \n \"xx\"', description: 'get set for ethSync\nto find the key...\nthat has been\nlong missing...\n $uni'),           //'3 min', description: 'Stir'),
+      const RecipeStep(duration: 'type \n \"xx\"', description: 'different approaches.\nadd info\n $uni'),           //'3 min', description: 'Stir'),
       const RecipeStep(duration: '45 min\n \u1300\n $u \n $uni', description: 'nothing here but knowhow'),   //$p
     ],
 
@@ -623,8 +625,8 @@ const List<Recipe> kPestoRecipes = const <Recipe>[
     name: 'ethCliSync Teminator',
     author: 'lubi',
     ingredientsImagePath: 'assets/ethBullet.png',
-    description: 'talk to me about this one\nglorious way to put screeen \u1300 \n but always make sure the sprouts are deliciously seasoned and appropriately sautéed.',
-    imagePath: 'assets/ethCliTerm.png',
+    description: 'talk to me about this one\nglorious way to put screen.',
+    imagePath: 'assets/ethGreenHelp.png',
     ingredients: const<RecipeIngredient>[
       const RecipeIngredient(amount: 'linux terminal', description: 'CLInterface'),
       const RecipeIngredient(amount: 'type', description: 'cmnds'),
@@ -634,60 +636,39 @@ const List<Recipe> kPestoRecipes = const <Recipe>[
 //      const RecipeIngredient(amount: '1/2 cup', description: 'Sun dried tomatoes'),
     ],
     steps: const<RecipeStep>[
-      const RecipeStep(duration: '3 min', description: 'Stir'),
-      const RecipeStep(duration: '45 min', description: 'Cook'),
+      const RecipeStep(duration: '30 min', description: 'boot P2P'),
+      const RecipeStep(duration: '60 min', description: 'geth'),
     ],
-
-
-
-//    name: 'Bacon Sprouts',
-//    author: 'Ali Connors',
-//    ingredientsImagePath: 'packages/flutter_gallery_assets/pesto/main.png',
-//    description: 'This beautiful sprouts recipe is the most glorious side dish on a cold winter’s night. Construct it with bacon or fake-on, but always make sure the sprouts are deliciously seasoned and appropriately sautéed.',
-//    imagePath: 'packages/flutter_gallery_assets/pesto/image3.jpg',
-//    ingredients: const<RecipeIngredient>[
-//      const RecipeIngredient(amount: '2 lbs', description: 'Brussel sprouts'),
-//      const RecipeIngredient(amount: '3 lbs', description: 'Bacon'),
-//      const RecipeIngredient(amount: '⅔ cup', description: 'Shaved parmesan cheese'),
-//      const RecipeIngredient(amount: '1tbsp', description: 'Extra virgin olive oil'),
-//      const RecipeIngredient(amount: '1 tsp', description: 'Lemon juice'),
-//      const RecipeIngredient(amount: '1/2 cup', description: 'Sun dried tomatoes'),
-//    ],
-//    steps: const<RecipeStep>[
-//      const RecipeStep(duration: '3 min', description: 'Stir'),
-//      const RecipeStep(duration: '45 min', description: 'Cook'),
-//    ],
   ),
   const Recipe(
     name: 'Cli Further tech',
     author: 'lubi',
     ingredientsImagePath: 'assets/logoCli.png',
     description: 'Robust cuts of portuguese sausage add layers of flavour. Bake or fry until sausages are slightly browned and with a crispy skin. Serve warm and with cuts of pineapple for a delightful mix of sweet and savory flavour. This is the perfect dish after a swim in the sea.',
-    imagePath: 'assets/ethClilrg.png',
+    imagePath: 'assets/gethTerm.png',
     ingredients: const<RecipeIngredient>[
-      const RecipeIngredient(amount: '1 1/2 lbs', description: 'Linguisa'),
-      const RecipeIngredient(amount: '1 lbs', description: 'Pineapple or other fresh citrus fruit'),
+      const RecipeIngredient(amount: 'linux terminal', description: 'CLInterface'),
+      const RecipeIngredient(amount: 'type', description: 'cmnds'),
     ],
     steps: const<RecipeStep>[
-      const RecipeStep(duration: '3 min', description: 'Stir'),
-      const RecipeStep(duration: '45 min', description: 'Cook'),
+      const RecipeStep(duration: '30 min', description: 'boot P2P'),
+      const RecipeStep(duration: '60 min', description: 'geth'),
     ],
   ),
   const Recipe(
+    //keep checking Unicode
     name: 'Lets Roast \u1300',
     author: 'terminator',
-    ingredientsImagePath: 'assets/logoHyg.png',
-    description: 'Crisp flavours and a bit of sp\n    ice make this roasted chicken dish an ea\nsy go to when cooking for large groups. Top with Baja sauce for an extra kick of spice.',
-    imagePath: 'assets/ethGreen.png',   //green clear , on blk
+    ingredientsImagePath: 'assets/logoCli.png',
+    description: 'Clear writing instructions\nshort and poignant.\n',
+    imagePath: 'assets/devcon1.png',   //green clear , on blk
     ingredients: const<RecipeIngredient>[
-      const RecipeIngredient(amount: 'green frog', description: 'Small corn tortillas'),
-      const RecipeIngredient(amount: '½ cup', description: 'Chopped onion'),
-      const RecipeIngredient(amount: '⅔', description: 'Cream'),
-      const RecipeIngredient(amount: '3-4oz', description: 'Roasted, shredded chicken breast'),
+      const RecipeIngredient(amount: 'linux terminal', description: 'CLInterface'),
+      const RecipeIngredient(amount: 'type', description: 'cmnds'),
     ],
     steps: const<RecipeStep>[
-      const RecipeStep(duration: '3 min', description: 'Stir'),
-      const RecipeStep(duration: '45 min', description: 'Cook'),
+      const RecipeStep(duration: '30 min', description: 'boot P2P'),
+      const RecipeStep(duration: '60 min', description: 'geth'),
     ],
   ),
   const Recipe(
@@ -695,18 +676,14 @@ const List<Recipe> kPestoRecipes = const <Recipe>[
     author: 'ethSync',
     ingredientsImagePath: 'assets/duIcon.png',
     description: 'This dish is a terrific pairing to almost any main. Bonus- it’s quick, easy to make, and turns even the simplest of dishes into a delicacy. Sweet coconut cream will leave your mouth watering, with yummy caramelized  flecks of rice adding an extra bit of taste. Fluff with fork before serving for best results.',
-    imagePath: 'assets/ethGreenHelp.png',   //green clear , on blk
+    imagePath: 'assets/bleachBitSwap.png',   //green clear , on blk
     ingredients: const<RecipeIngredient>[
-      const RecipeIngredient(amount: '2 cups', description: 'Jasmine rice'),
-      const RecipeIngredient(amount: '1 1/2 cups', description: 'Water'),
-      const RecipeIngredient(amount: '1 cup', description: 'Coconut milk'),
-      const RecipeIngredient(amount: '1 1/2 tbsp', description: 'Sugar'),
-      const RecipeIngredient(amount: '1tsp', description: 'Salt'),
+      const RecipeIngredient(amount: 'linux terminal', description: 'CLInterface'),
+      const RecipeIngredient(amount: 'type', description: 'cmnds'),
     ],
     steps: const<RecipeStep>[
-      const RecipeStep(duration: '3 min', description: 'Stir'),
-      const RecipeStep(duration: '45 min', description: 'Cook')
+      const RecipeStep(duration: '30 min', description: 'boot P2P'),
+      const RecipeStep(duration: '60 min', description: 'geth'),
     ],
   ),
 ];
-
