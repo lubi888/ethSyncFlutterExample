@@ -708,5 +708,5 @@ const List<Recipe> kPestoRecipes = const <Recipe>[
       const RecipeStep(duration: '45 min', description: 'Cook')
     ],
   ),
-
+];
 
